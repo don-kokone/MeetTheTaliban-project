@@ -7,7 +7,18 @@
 }
 
 body {
+  background-color: darkorange;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  height: 70rem;
+}
+
+@font-face {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  src: url(href= "https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+  font-size: 400;
+  unicode-range: U+0025-00FF;
+  font-display: swap;
 }
 
 a {
@@ -23,19 +34,12 @@ a:active {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border-bottom: 2px dotted whitesmoke;
+  padding-bottom: 1rem;
+}
+
+.header .navigation {
+  display: none;
 }
 
 .logo {
@@ -48,13 +52,13 @@ a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-left: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
 }
 
 .logo__image {
@@ -63,7 +67,59 @@ a:active {
 }
 
 .logo__text {
-  max-width: 35%;
-  height: auto;
+  margin-top: 0.5rem;
+  color: whitesmoke;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.logo__text-firstLine, .logo__text-thirdLine {
+  position: absolute;
+  top: -2.5rem;
+}
+
+.logo__text-firstLine {
+  left: -6rem;
+}
+
+.logo__text-secondLine {
+  top: 0;
+}
+
+.logo__text-thirdLine {
+  right: -6rem;
+}
+
+.mobile-navigation-section {
+  position: fixed;
+  left: 87%;
+  top: 30%;
+  z-index: 10;
+  margin-bottom: 4rem;
+  background-color: whitesmoke;
+}
+
+.mobile-navigation-section .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.mobile-navigation-section .navigation {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

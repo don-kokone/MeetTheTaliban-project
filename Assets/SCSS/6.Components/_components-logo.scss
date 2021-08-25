@@ -1,21 +1,44 @@
-.logo{
+.logo {
 
     width: 100vw;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 1rem;
+    @include standartFlex(column, center, center);
+    margin-top: 1rem;
 
-    &__image{
+
+    &__image {
         max-width: 25%;
         height: auto;
 
     }
 
-    &__text{
-        max-width: 35%;
-        height: auto;
+    &__text {
+        margin-top: 0.5rem;
+        color: $color-white;
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: relative;
+
+        &-firstLine,
+        &-thirdLine
+        {
+            position: absolute;
+            top: -2.5rem;
+            
+        }
+
+        &-firstLine{
+            left: -6rem;
+        }
+
+        &-secondLine{
+            top:0;
+        }
+
+        &-thirdLine{
+            right: -6rem;
+        }
+
     }
 }

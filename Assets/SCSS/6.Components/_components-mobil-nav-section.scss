@@ -1,0 +1,23 @@
+.mobile-navigation-section {
+
+    position: fixed;
+    left: 87%;
+    top: 30%;
+    z-index: 10;
+    margin-bottom: 4rem;
+    background-color: $color-white;
+    
+
+    .icons {
+
+        @include standartFlex(column);
+        font-size: 2rem;
+        padding-right: 1rem;
+    }
+
+
+    .navigation {
+
+        display: none;
+    }
+}
