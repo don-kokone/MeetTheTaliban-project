@@ -10,7 +10,6 @@ body {
   background-color: darkorange;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  height: 70rem;
 }
 
 @font-face {
@@ -33,9 +32,8 @@ a:active {
   color: inherit;
 }
 
-.header {
-  border-bottom: 2px dotted whitesmoke;
-  padding-bottom: 1rem;
+li {
+  list-style-type: none;
 }
 
 .header .navigation {
@@ -94,11 +92,23 @@ a:active {
 
 .mobile-navigation-section {
   position: fixed;
-  left: 87%;
-  top: 30%;
-  z-index: 10;
-  margin-bottom: 4rem;
-  background-color: whitesmoke;
+  top: 35%;
+  right: 0%;
+  background-color: dodgerblue;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mobile-navigation-section .icons {
@@ -109,17 +119,36 @@ a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
-  padding-right: 1rem;
+}
+
+.mobile-navigation-section .icons .mobile-menu-button {
+  padding-bottom: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.mobile-navigation-section .icons .icon {
+  color: white;
 }
 
 .mobile-navigation-section .navigation {
   display: none;
+}
+
+.mobile-navigation-section .navigation li {
+  padding-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+
+.mobile-navigation-section .navigation.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

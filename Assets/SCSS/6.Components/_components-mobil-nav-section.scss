@@ -1,23 +1,44 @@
 .mobile-navigation-section {
 
     position: fixed;
-    left: 87%;
-    top: 30%;
-    z-index: 10;
-    margin-bottom: 4rem;
-    background-color: $color-white;
+    top: 35%;
+    right: 0%;
+    background-color: $color-blue;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px;
+    @include standartFlex(row, space-around, center);
     
-
     .icons {
 
-        @include standartFlex(column);
+        @include standartFlex(column, space-around, center);
         font-size: 2rem;
-        padding-right: 1rem;
+
+        .mobile-menu-button{
+            padding-bottom: 0.5rem;
+            background-color: transparent;
+            border: none;
+        }
+
+        
+        .icon{
+            color: white;
+        }
+
     }
 
-
+   
     .navigation {
-
+        
         display: none;
+
+        li{
+            padding-bottom: 1rem;
+            margin-left: 0.5rem;
+        }
+        
+    }
+
+    .navigation.active{
+        display: flex;
     }
 }
