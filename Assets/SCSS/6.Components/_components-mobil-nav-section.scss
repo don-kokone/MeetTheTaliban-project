@@ -19,10 +19,17 @@
             border: none;
         }
 
-        
-        .icon{
-            color: white;
+        .social-icons{
+
+            @include standartFlex(column, space-around, center);
+
+            .icon{
+                color: white;
+            }
         }
+
+        
+       
 
     }
 
@@ -35,10 +42,28 @@
             padding-bottom: 1rem;
             margin-left: 0.5rem;
         }
+
+        .social-icons{
+            display: none;
+        }
         
     }
 
     .navigation.active{
+
         display: flex;
+
+        li{
+            animation-name: smooth-menu-gliding;
+            animation-duration:    1s;
+            animation-fill-mode: forwards;     
+        }
+       
+    }
+
+
+     .social-icons{
+        display: flex;
+        font-size: 2rem;
     }
 }
