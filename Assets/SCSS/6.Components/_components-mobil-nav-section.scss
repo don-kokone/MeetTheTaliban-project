@@ -19,16 +19,16 @@
             border: none;
         }
 
-        .social-icons{
+        .icon{
+            color: white;
+        }
+
+        .social-icons.vertical{
 
             @include standartFlex(column, space-around, center);
 
-            .icon{
-                color: white;
-            }
         }
 
-        
        
 
     }
@@ -43,9 +43,11 @@
             margin-left: 0.5rem;
         }
 
-        .social-icons{
-            display: none;
+        .social-icons.horizonal{
+            display: flex;
+            font-size: 2rem;
         }
+       
         
     }
 
@@ -58,12 +60,14 @@
             animation-duration:    1s;
             animation-fill-mode: forwards;     
         }
-       
+
+        
+    }
+    
+    .nonactive{
+        display: none !important;
     }
 
 
-     .social-icons{
-        display: flex;
-        font-size: 2rem;
-    }
 }
+
